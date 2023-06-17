@@ -50,7 +50,7 @@ This is tested on Azure AKS, using NGINX Plus version 3.1.1
 
 ### Installation
 
-_Follow the steps below._
+_Follow the steps below if you want to manually apply each manifests, if you want to delpoy using script, please go here_
 
 1. Prepare your NGINX Plus JWT token license, you can get a free NGINX Plus trial license at [https://www.nginx.com/free-trial-request/](https://www.nginx.com/free-trial-request/)
 2. Clone the repo
