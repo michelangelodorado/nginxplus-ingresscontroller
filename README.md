@@ -62,9 +62,18 @@ _Below is an example of how you can instruct your audience on installing and set
    cd nginxplus-ingresscontroller
    ```
 4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
+   ```sh
+   read jwt
    ```
+5. Run the command below to store contents inside 'jwt' variable
+   ```sh
+   read jwt
+   ```
+6. Paste the contents of the `nginx-repo.jwt` you obtained from NGINX Team
+   ```sh
+   read jwt
+   ```
+      
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
