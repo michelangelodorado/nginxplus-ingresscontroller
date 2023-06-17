@@ -61,51 +61,47 @@ _Below is an example of how you can instruct your audience on installing and set
    ```sh
    cd nginxplus-ingresscontroller
    ```
-4. Enter your API in `config.js`
+4. Run the command below to store contents inside jwt variable
    ```sh
    read jwt
    ```
-5. Run the command below to store contents inside jwt variable
-   ```sh
-   read jwt
-   ```
-6. Paste the contents of the `nginx-repo.jwt` you obtained from NGINX Team. For example:
+5. Paste the contents of the `nginx-repo.jwt` you obtained from NGINX Team. For example:
    ```console
    admin@kube-master nginxplus-ingresscontroller % read jwt
    eyJhbGciOiJSUzI1NiIsIn65cCI6IkpXVCIsImtpZCI6InRyaWFsIn0.eyJpc3MiOiJuZ2lueCBpc3N1ZXIiLCJpYXQiOjE2ODU3MjM2NDUsImp0aSI6IjEzMzE5Iiwic3ViIjoiSTAwMDEzMDQwOCIsImV4cCI6MTcwMTI3NTY0NX0.GT1pjWhttF_NpkXC_W0SdyanaM6nPwvv608cKBerqeGUY6WX03h5CjIq9XLgF7b0lfPxLoruyvzf0Jxa8o7w1768CmxFsaHbmv5Z-ueDX3e_s_2oTWGREBw_HwdpM7sJY2XoBd9eMacA7eL5cgSMB9JSOBKEGNm83vM_xuIC1mnfwRNh1qxR2l-bdzj_ErP7rIK7AswApMg2hqOeUbeHYN3og33gL7LhsaKesFeg6t-LA11lVNPN0F2jZ31EV3Q0ZI0ePlCY30y-AZtU92YPYfNpG9ekVEu16UOinKEY6yGpPgPMMsgnvtOEmQZcmnxCqyq54FSRYl3-49PSvZ2W16ic2zZxw67ERwfnHkawQqwigmjW73NYZoQOZyToWvMW6mJ9Lu6dE3L8r66AI9-JO6xH9aUS39BHfFtAzmaewItPRvUgaEtczNQnL5_UnY6xcaRDRPcP4oaEu6S56qKbpXxtfV-OsgRbK7z-uQdCe0jO85H53qbIATlkqUagEKd8
    ```
-7. Run the command below to create a secret using the value from jwt
+6. Run the command below to create a secret using the value from jwt
    ```sh
    kubectl create secret docker-registry regcred --docker-server=private-registry.nginx.com --docker-username=$jwt --docker-password=none -n nginx-ingress
    ``` 
-8. Configure namespace and service account
+7. Configure namespace and service account
    ```sh
    kubectl apply -f ns-and-sa.yaml
    ``` 
-9. Configure RBAC
+8. Configure RBAC
    ```sh
    kubectl apply -f rbac.yaml
    ``` 
-10. Create a config map for customizing NGINX configuration
+9. Create a config map for customizing NGINX configuration<a name="Step 9"></a>
     ```sh
     kubectl apply -f nginx-config.yaml
     ``` 
-11. Create an IngressClass resource:
+10. Create an IngressClass resource:
     ```sh
     kubectl apply -f ingress-class.yaml
     ``` 
-12. Create custom resource definitions for VirtualServer and VirtualServerRoute, TransportServer and Policy resources:
+11. Create custom resource definitions for VirtualServer and VirtualServerRoute, TransportServer and Policy resources:
     ```sh
     kubectl apply -f k8s.nginx.org_virtualservers.yaml
     kubectl apply -f k8s.nginx.org_virtualserverroutes.yaml
     kubectl apply -f k8s.nginx.org_transportservers.yaml
     kubectl apply -f k8s.nginx.org_policies.yaml
     ```
-13. Deploy the Ingress Controller
+12. Deploy the Ingress Controller
     ```sh
     kubectl apply -f nginx-ingress-deployment.yaml
     ```
-14. Create a service using a manifest for your cloud provider (Azure):
+13. Create a service using a manifest for your cloud provider (Azure):
 
     * <b>Azure</b>:
       ```sh
@@ -115,7 +111,7 @@ _Below is an example of how you can instruct your audience on installing and set
       ```sh
       kubectl apply -f nginx-ingress-service-aws.yaml
       ```
-      Add the following keys to the config map file nginx-config.yaml from the Step 10
+      Add the following keys to the config map file nginx-config.yaml from <a href="#Step 9">Step 9</a>
       ```sh
       proxy-protocol: "True"
       real-ip-header: "proxy_protocol"
@@ -126,7 +122,7 @@ _Below is an example of how you can instruct your audience on installing and set
       kubectl apply -f nginx-ingress-service.yaml
       ```
     
-16. Expose the NGINX Ingress Controller Dashboard
+14. Expose the NGINX Ingress Controller Dashboard
     ```sh
     kubectl apply -f dashboard-nginx-ingress-service.yaml
     ```
