@@ -107,17 +107,21 @@ _Below is an example of how you can instruct your audience on installing and set
     ```
 14. Create a service using a manifest for your cloud provider (Azure):
 
-    * Azure
+    * Azure:
       ```sh
       kubectl apply -f nginx-ingress-service.yaml
       ```
-    * AWS:<br>
+    * AWS:
+      ```sh
+      kubectl apply -f nginx-ingress-service-aws.yaml
+      ```
       Add the following keys to the config map file nginx-config.yaml from the Step 10
       ```sh
       proxy-protocol: "True"
       real-ip-header: "proxy_protocol"
       set-real-ip-from: "0.0.0.0/0"
       ```
+      Update the config map
       ```sh
       kubectl apply -f nginx-ingress-service.yaml
       ```
