@@ -101,7 +101,7 @@ _Below is an example of how you can instruct your audience on installing and set
     kubectl apply -f k8s.nginx.org_transportservers.yaml
     kubectl apply -f k8s.nginx.org_policies.yaml
     ```
-13. Delpoy the Ingress Controller
+13. Deploy the Ingress Controller
     ```sh
     kubectl apply -f nginx-ingress-deployment.yaml
     ```
