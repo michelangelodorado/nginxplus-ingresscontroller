@@ -107,11 +107,11 @@ _Below is an example of how you can instruct your audience on installing and set
     ```
 14. Create a service using a manifest for your cloud provider (Azure):
 
-    * Azure:
+    * <b>Azure</b>:
       ```sh
       kubectl apply -f nginx-ingress-service.yaml
       ```
-    * AWS:
+    * <b>AWS</b>:
       ```sh
       kubectl apply -f nginx-ingress-service-aws.yaml
       ```
