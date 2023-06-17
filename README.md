@@ -33,7 +33,7 @@
 
 Installing the NGINX Ingress Controller in your Kubernetes cluster using Kubernetes manifests
 
-This project was created based on the documentation below but modifications has been made to use NGINX Plus image:<br>
+This project was created based on the documentation below but modifications has been made to use NGINX Plus image from the private repository:<br>
 [https://docs.nginx.com/nginx-ingress-controller/installation/installation-with-manifests/](https://docs.nginx.com/nginx-ingress-controller/installation/installation-with-manifests/)
 
 <!-- GETTING STARTED -->
