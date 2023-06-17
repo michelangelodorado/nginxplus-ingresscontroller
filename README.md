@@ -74,7 +74,10 @@ _Below is an example of how you can instruct your audience on installing and set
    admin@kube-master nginxplus-ingresscontroller % read jwt
    eyJhbGciOiJSUzI1NiIsIn65cCI6IkpXVCIsImtpZCI6InRyaWFsIn0.eyJpc3MiOiJuZ2lueCBpc3N1ZXIiLCJpYXQiOjE2ODU3MjM2NDUsImp0aSI6IjEzMzE5Iiwic3ViIjoiSTAwMDEzMDQwOCIsImV4cCI6MTcwMTI3NTY0NX0.GT1pjWhttF_NpkXC_W0SdyanaM6nPwvv608cKBerqeGUY6WX03h5CjIq9XLgF7b0lfPxLoruyvzf0Jxa8o7w1768CmxFsaHbmv5Z-ueDX3e_s_2oTWGREBw_HwdpM7sJY2XoBd9eMacA7eL5cgSMB9JSOBKEGNm83vM_xuIC1mnfwRNh1qxR2l-bdzj_ErP7rIK7AswApMg2hqOeUbeHYN3og33gL7LhsaKesFeg6t-LA11lVNPN0F2jZ31EV3Q0ZI0ePlCY30y-AZtU92YPYfNpG9ekVEu16UOinKEY6yGpPgPMMsgnvtOEmQZcmnxCqyq54FSRYl3-49PSvZ2W16ic2zZxw67ERwfnHkawQqwigmjW73NYZoQOZyToWvMW6mJ9Lu6dE3L8r66AI9-JO6xH9aUS39BHfFtAzmaewItPRvUgaEtczNQnL5_UnY6xcaRDRPcP4oaEu6S56qKbpXxtfV-OsgRbK7z-uQdCe0jO85H53qbIATlkqUagEKd8
    ```
-      
+5. Run the command below to create a secret using the value from jwt
+   ```sh
+   kubectl create secret docker-registry regcred --docker-server=private-registry.nginx.com --docker-username=$jwt --docker-password=none -n nginx-ingress
+   ``` 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
