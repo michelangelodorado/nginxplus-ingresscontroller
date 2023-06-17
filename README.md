@@ -111,7 +111,7 @@ _Below is an example of how you can instruct your audience on installing and set
       ```sh
       kubectl apply -f nginx-ingress-service-aws.yaml
       ```
-      Add the following keys to the config map file nginx-config.yaml from <a href="#Step 9">Step 9</a>
+      Add the following keys to the config map file `nginx-config.yaml` from <a href="#Step 9">Step 9</a>
       ```sh
       proxy-protocol: "True"
       real-ip-header: "proxy_protocol"
