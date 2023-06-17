@@ -106,10 +106,23 @@ _Below is an example of how you can instruct your audience on installing and set
     kubectl apply -f nginx-ingress-deployment.yaml
     ```
 14. Create a service using a manifest for your cloud provider (Azure):
-    ```sh
-    kubectl apply -f nginx-ingress-service.yaml
-    ```
-15. Expose the NGINX Ingress Controller Dashboard
+
+    * Azure
+      ```sh
+      kubectl apply -f nginx-ingress-service.yaml
+      ```
+    * AWS:<br>
+      Add the following keys to the config map file nginx-config.yaml from the Step 10
+      ```sh
+      proxy-protocol: "True"
+      real-ip-header: "proxy_protocol"
+      set-real-ip-from: "0.0.0.0/0"
+      ```
+      ```sh
+      kubectl apply -f nginx-ingress-service.yaml
+      ```
+    
+16. Expose the NGINX Ingress Controller Dashboard
     ```sh
     kubectl apply -f dashboard-nginx-ingress-service.yaml
     ```
