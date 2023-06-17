@@ -57,9 +57,9 @@ _Below is an example of how you can instruct your audience on installing and set
    ```sh
    git clone https://github.com/michelangelodorado/nginxplus-ingresscontroller.git
    ```
-3. Install NPM packages
+3. Change your current working directory to the newly cloned repository
    ```sh
-   npm install
+   cd nginxplus-ingresscontroller
    ```
 4. Enter your API in `config.js`
    ```js
