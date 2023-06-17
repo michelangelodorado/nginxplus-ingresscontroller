@@ -52,7 +52,7 @@ This is tested on Azure AKS, using NGINX Plus version 3.1.1
 
 _Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
 
-1. Get a free API Key at [https://example.com](https://example.com)
+1. Prepare your NGINX Plus JWT token license, you can get a free NGINX Plus trial license at [https://www.nginx.com/free-trial-request/](https://www.nginx.com/free-trial-request/)
 2. Clone the repo
    ```sh
    git clone https://github.com/your_username_/Project-Name.git
