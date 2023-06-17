@@ -101,7 +101,7 @@ _Below is an example of how you can instruct your audience on installing and set
     ```sh
     kubectl apply -f nginx-ingress-deployment.yaml
     ```
-13. Create a service using a manifest for your cloud provider (Azure):
+13. Create a service using a manifest for your cloud provider:
 
     * <b>Azure</b>:
       ```sh
