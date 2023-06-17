@@ -87,33 +87,32 @@ _Below is an example of how you can instruct your audience on installing and set
    kubectl apply -f rbac.yaml
    ``` 
 10. Create a config map for customizing NGINX configuration
-   ```sh
-   kubectl apply -f nginx-config.yaml
-   ``` 
+    ```sh
+    kubectl apply -f nginx-config.yaml
+    ``` 
 11. Create an IngressClass resource:
-   ```sh
-   kubectl apply -f ingress-class.yaml
-   ``` 
+    ```sh
+    kubectl apply -f ingress-class.yaml
+    ``` 
 12. Create custom resource definitions for VirtualServer and VirtualServerRoute, TransportServer and Policy resources:
-   ```sh
-   kubectl apply -f k8s.nginx.org_virtualservers.yaml
-   kubectl apply -f k8s.nginx.org_virtualserverroutes.yaml
-   kubectl apply -f k8s.nginx.org_transportservers.yaml
-   kubectl apply -f k8s.nginx.org_policies.yaml
-   ```
+    ```sh
+    kubectl apply -f k8s.nginx.org_virtualservers.yaml
+    kubectl apply -f k8s.nginx.org_virtualserverroutes.yaml
+    kubectl apply -f k8s.nginx.org_transportservers.yaml
+    kubectl apply -f k8s.nginx.org_policies.yaml
+    ```
 13. Delpoy the Ingress Controller
-   ```sh
-   kubectl apply -f nginx-ingress-deployment.yaml
-   ```
+    ```sh
+    kubectl apply -f nginx-ingress-deployment.yaml
+    ```
 14. Create a service using a manifest for your cloud provider (Azure):
-   ```sh
-   kubectl apply -f nginx-ingress-service.yaml
-   ```
-   
+    ```sh
+    kubectl apply -f nginx-ingress-service.yaml
+    ```
 15. Expose the NGINX Ingress Controller Dashboard
-   ```sh
-   kubectl apply -f dashboard-nginx-ingress-service.yaml
-   ```
+    ```sh
+    kubectl apply -f dashboard-nginx-ingress-service.yaml
+    ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
